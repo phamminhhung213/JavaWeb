@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="bd465db0-133e-44f3-87f5-6b81ab1a6b9d" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../../../MVC_MODEL/BT/QLSP/src/Dao/CustomerDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../MVC_MODEL/BT/QLSP/src/controller/CustomerServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../MVC_MODEL/BT/QLSP/src/model/Customer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../MVC_MODEL/BT/QLSP/web/customer/editCustomer.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../MVC_MODEL/BT/QLSP/web/customer/newCustomer.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../MVC_MODEL/TH/ung_dung_quan_ly_khach_hang/src/controller/CustomerServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../MVC_MODEL/TH/ung_dung_quan_ly_khach_hang/src/model/Customer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../MVC_MODEL/TH/ung_dung_quan_ly_khach_hang/src/service/CustomerService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../MVC_MODEL/TH/ung_dung_quan_ly_khach_hang/src/service/CustomerServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../MVC_MODEL/TH/ung_dung_quan_ly_khach_hang/web/customer/create.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../MVC_MODEL/TH/ung_dung_quan_ly_khach_hang/web/customer/delete.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../MVC_MODEL/TH/ung_dung_quan_ly_khach_hang/web/customer/edit.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../MVC_MODEL/TH/ung_dung_quan_ly_khach_hang/web/customer/list.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../MVC_MODEL/TH/ung_dung_quan_ly_khach_hang/web/customer/view.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../MVC_MODEL/TH/ung_dung_quan_ly_khach_hang/web/error-404.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../TH/spring_greeting/src/controllers/GreetingController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../TH/spring_greeting/web/WEB-INF/applicationContext.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../TH/spring_greeting/web/WEB-INF/dispatcher-servlet.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../JPS_va_JSTL/TH/SimpleDictionary/web/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../../../JPS_va_JSTL/TH/SimpleDictionary/web/index.jsp" afterDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="spring-beans.schema" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
+  </component>
+  <component name="IgnoredFileRootStore">
+    <option name="generatedRoots">
+      <set>
+        <option value="D:\CodeGym\JavaWeb\Tong_quan_Spring_MVC\BT\ung_dung_chuyen_doi_tien_te\.idea" />
+      </set>
+    </option>
+  </component>
+  <component name="ProjectConfigurationFiles">
+    <option name="files">
+      <list>
+        <option value="$PROJECT_DIR$/.idea/.gitignore" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="1aJZaywaEIR4BOQ3x9MZt759wRR" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="bd465db0-133e-44f3-87f5-6b81ab1a6b9d" name="Default Changelist" comment="" />
+      <created>1586455724917</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1586455724917</updated>
+      <workItem from="1586455732321" duration="95000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>
