@@ -1,8 +1,8 @@
 <%--
   Created by IntelliJ IDEA.
   User: Techcare
-  Date: 4/10/2020
-  Time: 9:18 AM
+  Date: 4/12/2020
+  Time: 11:08 AM
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
@@ -11,8 +11,10 @@
     <title>Title</title>
 </head>
 <body>
-<h1>word : ${word}</h1>
-<h2>Mean : ${result}</h2>
-<h1 style="color: red">${error}</h1>
+<h1>Welcome</h1>
+<h3>Account: ${user.account}</h3>
+<h3>Name: ${user.name}</h3>
+<h3>Email: ${user.email}</h3>
+<h3>Age: ${user.age}</h3>
 </body>
 </html>
