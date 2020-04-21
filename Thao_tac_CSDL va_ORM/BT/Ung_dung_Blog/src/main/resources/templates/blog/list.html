@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>List Blog</title>
+</head>
+<style>
+    img {
+        height: 213px;
+        width: 279px;
+    }
+    .tin{
+        width: 281px;
+        height: 330px;
+        float: left;
+        margin-right: 20px;
+
+    }
+    a{
+        text-decoration: none;
+    }
+    .div_but{
+       margin-top: 30px;
+
+    }
+    h3{
+        margin: 0;
+    }
+</style>
+<body>
+<a href="/create-blog">Create new blog</a>
+<h1 style="color: green;text-align: center" >Chào mừng bạn đã đến với Blog Tin Tức</h1>
+<!--<a th:href="/list-blog"></a>-->
+<th:block th:each="blog:${blogs}">
+    <div class="tin">
+        <img th:src="@{${blog.image}}" alt="">
+        <h3 th:text="${blog.title}"></h3>
+        <div class="div_but">
+            <button><a th:href="@{/edit-blog/__${blog.id}__}">Edit</a></button>
+            <button><a th:href="@{/delete-blog/__${blog.id}__}">Delete</a></button>
+        </div>
+
+    </div>
+</th:block>
+</body>
+</html>
