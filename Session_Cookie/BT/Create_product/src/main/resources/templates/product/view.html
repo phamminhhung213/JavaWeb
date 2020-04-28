@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<a th:href="@{/edit-product/__${product.id}__ }">Edit product</a>
+<a th:href="@{/delete-product/__${product.id}__ }">Delete product</a>
+<center>
+<table border="1">
+    <tr>
+        <th:block th:object="${product}">
+            <td rowspan="7">
+                <a><img th:src="@{'../'+${product.image.image_url}}"></a>
+            </td>
+        </th:block>
+    </tr>
+
+    <tr>
+    <th:block th:object="${product}">
+        <td><center><p th:text="*{name}"></center></td>
+    </th:block>
+        <th:block th:object="${product}">
+            <td rowspan="4">
+                <img th:src="@{../img/sp/detail.png}">
+            </td>
+        </th:block>
+    </tr>
+    <tr>
+    <th:block th:object="${product}">
+        <td><center><p th:text="*{quantity}"></center></td>
+    </th:block>
+    </tr>
+    <tr>
+    <th:block th:object="${product}">
+        <td><center><p th:text="*{price}"></center></td>
+    </th:block>
+    </tr>
+    <tr>
+    <th:block th:object="${product}">
+        <td><center><p th:text="*{dateTime}"></center></td>
+    </th:block>
+    </tr>
+    <tr>
+    <th:block th:object="${product}">
+       <td><center><p th:text="*{image.id_product}"></center></td>
+    </th:block>
+        <th:block th:object="${product}">
+            <td rowspan="2">
+                <center><p th:text="*{detail}"></center>
+            </td>
+        </th:block>
+    </tr>
+    <tr>
+        <td><center><a th:href="@{/cart/__${product.id}__ }">Mua Ngay</a></center></td>
+    </tr>
+
+</table>
+</center>
+
+</body>
+</html>

@@ -19,8 +19,8 @@ import java.util.Optional;
 
 @Controller
 public class BlogController {
-    @Autowired
-    private BlogService blogService;
+     @Autowired
+    private BlogService blogService ;
     @Autowired
     private CategoryService categoryService;
 
@@ -28,7 +28,7 @@ public class BlogController {
     public Iterable<Category> categories(Pageable pageable) {
         return categoryService.findAll(pageable);
     }
-
+// dùng trong create ép vào
 
     @GetMapping("/blogs")
     public ModelAndView listBlogs(@RequestParam("s") Optional<String> s, @PageableDefault(value = 5) Pageable pageable) {

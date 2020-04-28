@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <title>View Image</title>
+</head>
+<body>
+<a href="/images">Image list</a>
+
+<center>
+<table border="1">
+    <tr>
+        <td>Id</td>
+        <td>Id_product</td>
+        <td>Image_Url</td>
+    </tr>
+    <tr>
+        <th:block th:object="${image}">
+            <td><p th:text="*{id}"></td>
+            <td><p th:text="*{id_product}"></td>
+            <td><p th:text="*{image_url}"></td>
+        </th:block>
+    </tr>
+
+</table>
+</center>
+
+
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Create Blog</title>
+</head>
+<body>
+<h1>Create User</h1>
+<p>
+    <a href="/users">User list</a>
+</p>
+<form th:action="@{/create-user}" th:object="${user}" method="post">
+    <table>
+        <tr>
+            <td>ID:</td>
+            <td><input type="text" th:field="*{id}"/></td>
+            <td th:if="${#fields.hasErrors('id')}" th:errors="*{id}">Name Error</td>
+        </tr>
+        <tr>
+            <td>PassWord:</td>
+            <td><input type="password" th:field="*{password}"/></td>
+            <td th:if="${#fields.hasErrors('password')}" th:errors="*{password}">Name Error</td>
+        </tr>
+
+        <tr>
+            <td>Email:</td>
+            <td><input type="text" th:field="*{email}"/></td>
+            <td th:if="${#fields.hasErrors('email')}" th:errors="*{email}">Name Error</td>
+        </tr>
+
+        <tr>
+            <td></td>
+          <td><input type="submit" value="Create User"></td>
+        </tr>
+  </table>
+</form>
+</body>
+</html>

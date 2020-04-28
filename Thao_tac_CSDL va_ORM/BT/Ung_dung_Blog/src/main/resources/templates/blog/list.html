@@ -31,13 +31,14 @@
 <a href="/create-blog">Create new blog</a>
 <h1 style="color: green;text-align: center" >Chào mừng bạn đã đến với Blog Tin Tức</h1>
 <!--<a th:href="/list-blog"></a>-->
+<!--/*@thymesVar id="blogs" type=""*/-->
 <th:block th:each="blog:${blogs}">
     <div class="tin">
         <img th:src="@{${blog.image}}" alt="">
         <h3 th:text="${blog.title}"></h3>
         <div class="div_but">
             <button><a th:href="@{/edit-blog/__${blog.id}__}">Edit</a></button>
-            <button><a th:href="@{/delete-blog/__${blog.id}__}">Delete</a></button>
+            <button><a th:href="@{/delete-blog/__${blog.id}__}">tDelee</a></button>
         </div>
 
     </div>
