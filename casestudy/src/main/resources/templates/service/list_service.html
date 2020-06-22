@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Service Form</title>
+</head>
+<body>
+<div th:replace="layout_new :: header"></div>
+<div class="row">
+    <div th:replace="layout_new :: left"></div>
+    <div class="content_main">
+        <div class="table-wrapper">
+        <div class="table-title">
+            <div class="row">
+                <div class="col-sm-6">
+                    <h2>Manage <b>Services</b></h2>
+                </div>
+                <div class="col-sm-6">
+                    <a href="/create-service" class="btn btn-success" data-toggle="modal"><i class="material-icons">&#xE147;</i> <span>Add New Service</span></a>
+                    <a href="#deleteEmployeeModal" class="btn btn-danger" data-toggle="modal"><i class="material-icons">&#xE15C;</i> <span>Delete</span></a>
+                </div>
+            </div>
+        </div>
+        <table class="table table-striped table-hover">
+            <thead>
+            <tr>
+                <th>
+							<span class="custom-checkbox">
+								<input type="checkbox" id="selectAll">
+								<label for="selectAll"></label>
+							</span>
+                </th>
+                <th>Code Service</th>
+                <th>Name Service</th>
+                <th>Area Used</th>
+                <th>Rental Costs</th>
+                <th>Max Number Of People</th>
+                <th>Type Rent</th>
+                <th>Status</th>
+                <th>Type Service</th>
+                <th>Room Standard</th>
+                <th>Number Of Floors</th>
+                <th>AreaPool</th>
+                <th>Free Service</th>
+                <th>Actions</th>
+            </tr>
+            </thead>
+            <tbody>
+            <th:block th:each="service : ${services}">
+                <tr>
+                    <td>
+							<span class="custom-checkbox">
+								<input th:type="checkbox" th:id="${service.id}" name="options[]" value="1">
+								<label th:for="${service.id}"></label>
+							</span>
+                    </td>
+                    <!--                    Hiển thị dữ liệu service-->
+                    <td th:text="${service.codeService}"></td>
+                    <td th:text="${service.serviceName}"></td>
+                    <td th:text="${service.areaUsed}"></td>
+                    <td th:text="${service.rentalCosts}"></td>
+                    <td th:text="${service.maxNumberOfPeople}"></td>
+                    <td th:text="${service.rentType.name}"></td>
+                    <td th:text="${service.status}"></td>
+                    <td th:text="${service.typeService}"></td>
+                    <td th:text="${service.roomStandard}"></td>
+                    <td th:text="${service.numberOfFloors}"></td>
+                    <td th:text="${service.areaPool}"></td>
+                    <td th:text="${service.freeService}"></td>
+                    <!--                    nút edit và delete-->
+                    <td>
+                        <a th:href="@{/edit-services/__${service.id}__ }" class="edit" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a>
+                        <a th:href="@{/delete-services/__${service.id}__ }" class="delete" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Delete" onclick="return confirm('Are you sure you want to delete service?')">&#xE872;</i></a>
+                        <a th:href="@{/view-services/__${service.id}__ }" class="view" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="View">&#xe8a0;</i></a>
+                    </td>
+                </tr>
+            </th:block>
+            </tbody>
+        </table>
+        <div class="clearfix">
+            <div class="hint-text">Showing <b>5</b> out of <b>25</b> entries</div>
+            <ul class="pagination">
+                <li class="page-item disabled"><a href="#">Previous</a></li>
+                <li class="page-item"><a href="#" class="page-link">1</a></li>
+                <li class="page-item"><a href="#" class="page-link">2</a></li>
+                <li class="page-item active"><a href="#" class="page-link">3</a></li>
+                <li class="page-item"><a href="#" class="page-link">4</a></li>
+                <li class="page-item"><a href="#" class="page-link">5</a></li>
+                <li class="page-item"><a href="#" class="page-link">Next</a></li>
+            </ul>
+        </div>
+    </div>
+
+   </div>
+</div>
+<div th:replace="layout_new :: footer"></div>
+</body>
+</html>

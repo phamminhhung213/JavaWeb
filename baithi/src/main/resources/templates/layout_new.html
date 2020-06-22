@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div class="row" th:fragment="header">
+    <div class="header">
+        <img  src="../images/logo.png" height="80px" align="left"/>
+        <br>
+        <h1>Employee </h1>
+    </div>
+    <div class="menu">
+        <ul>
+            <li><a class="active" href="/">Home</a></li>
+            <li><a href="/employees">Employee</a></li>
+            <li><a href="/parts">Part</a></li>
+            <li><a href="/search">Search</a></li>
+            <li style="float:right"><a href="#">Register</a></li>
+            <li style="float:right"><a href="#">Login</a></li>
+        </ul>
+    </div>
+</div>
+<div class="row">
+<!--    <div class="content_left" th:fragment="left">-->
+<!--        <ul>-->
+<!--            <li><a href="/services">Services</a></li>-->
+<!--            <li><a href="/customers">Customer</a></li>-->
+<!--            <li><a href="/employees">Employee</a></li>-->
+<!--            <li><a href="/contracts">Contract</a></li>-->
+<!--            <li><a href="/contractDetails">Contract Detail</a></li>-->
+<!--            <li><a href="/rentTypes">Rent Type</a></li>-->
+<!--            <li><a href="/degrees">Degree</a></li>-->
+<!--            <li><a href="/parts">Part</a></li>-->
+<!--            <li><a href="/positions">Position</a></li>-->
+<!--            <li><a href="/accompanys">Accompany</a></li>-->
+<!--        </ul>-->
+<!--    </div>-->
+    <div class="content">
+        <div class="slider">
+            <marquee align="center" direction="left" height="100" scrollamount="10" width="100%" behavior="alternate"><font color="red"> <font size="10px"> Welcome to PMH</font></font></marquee>
+        </div>
+    </div>
+<!--    <div class="content_right"  th:fragment="right">-->
+<!--        <ul>-->
+<!--            <li><a href="#">Feature 1</a></li>-->
+<!--            <li><a href="#">Feature 2</a></li>-->
+<!--            <li><a href="#">Feature 3</a></li>-->
+<!--            <li><a href="#">Feature 4</a></li>-->
+<!--            <li><a href="#">Feature 5</a></li>-->
+<!--            <li><a href="#">Feature 6</a></li>-->
+<!--            <li><a href="#">Feature 7</a></li>-->
+<!--        </ul>-->
+<!--    </div>-->
+</div>
+<div th:fragment="footer" class="footer">
+    <div class="footer_copy">
+        <p>© 2020 Exam. All rights reserved | Design by <a href="https://www.facebook.com/pmh213">PMH</a></p>
+    </div>
+    <footer>
+        <script src="../js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="../css/bootstrap.min.css">
+        <link rel="stylesheet" href="../css/layout.css">
+        <link href="../css/text.css" rel="stylesheet">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Varela+Round">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function(){
+                // Activate tooltip
+                $('[data-toggle="tooltip"]').tooltip();
+
+                // Select/Deselect checkboxes
+                var checkbox = $('table tbody input[type="checkbox"]');
+                $("#selectAll").click(function(){
+                    if(this.checked){
+                        checkbox.each(function(){
+                            this.checked = true;
+                        });
+                    } else{
+                        checkbox.each(function(){
+                            this.checked = false;
+                        });
+                    }
+                });
+                checkbox.click(function(){
+                    if(!this.checked){
+                        $("#selectAll").prop("checked", false);
+                    }
+                });
+            });
+        </script>
+    </footer>
+</div>
+</body>
+</html>

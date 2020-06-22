@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="layout :: head">
+</head>
+<body>
+<div class="container" style="width: 50%">
+    <div class="card">
+        <div class="card-header">
+            <h4>Contract Information</h4>
+            <th:block th:if="${message}">
+                <p style="color: blue" th:text="${message}"></p>
+            </th:block>
+        </div>
+        <div class="card-body">
+            <form class="form" role="form" autocomplete="off" th:action="@{/edit-contract}" method="post" th:object="${contract}">
+                <input th:type="hidden" name="id" th:field="*{id}">
+                <div class="form-group row">
+                    <label class="col-lg-4 col-form-label form-control-label">Id Employee</label>
+                    <div class="col-lg-8">
+<!--                        <input class="form-control" type="text" th:field="*{employeeType}">-->
+                        <select class="form-control"  th:field="*{employee}">
+                            <option th:each="c : ${employees}" th:value="${c.id}" th:text="${c.fullName}"></option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label class="col-lg-4 col-form-label form-control-label">Id Customer</label>
+                    <div class="col-lg-8">
+<!--                        <input class="form-control" type="text" th:field="*{employeeType}">-->
+                        <select class="form-control"  th:field="*{customer}">
+                            <option th:each="c : ${customers}" th:value="${c.id}" th:text="${c.id}"></option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label class="col-lg-4 col-form-label form-control-label">Id Service</label>
+                    <div class="col-lg-8">
+<!--                        <input class="form-control" type="text" th:field="*{employeeType}">-->
+                        <select class="form-control"  th:field="*{services}">
+                            <option th:each="c : ${services}" th:value="${c.id}" th:text="${c.serviceName}"></option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label class="col-lg-4 col-form-label form-control-label">Begin Date;</label>
+                    <div class="col-lg-8">
+                        <input class="form-control" type="date" th:field="*{beginDate}">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label class="col-lg-4 col-form-label form-control-label">End Date</label>
+                    <div class="col-lg-8">
+                        <input class="form-control" type="date" th:field="*{endDate}">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label class="col-lg-4 col-form-label form-control-label">Deposit</label>
+                    <div class="col-lg-8">
+                        <input class="form-control" type="text" th:field="*{deposit}">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label class="col-lg-4 col-form-label form-control-label">Total Pay</label>
+                    <div class="col-lg-8">
+                        <input class="form-control" type="text" th:field="*{totalPay}">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <div class="col-lg-12 text-center">
+                        <a type="button" class="btn btn-secondary" href="/contracts">Cancel</a>
+                        <input type="submit" class="btn btn-primary"
+                               value="Save Changes">
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+</body>
+</html>

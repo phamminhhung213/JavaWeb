@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Edit Employee</title>
+</head>
+<body>
+<div th:replace="layout_new :: header"></div>
+
+<div class="container" style="width: 50%">
+    <div class="card">
+        <div class="card-header">
+            <h4>Employee Information</h4>
+            <th:block th:if="${message}">
+                <p style="color: blue" th:text="${message}"></p>
+            </th:block>
+        </div>
+        <div class="card-body">
+            <form class="form" role="form" autocomplete="off" th:action="@{/edit-employee}" method="post" th:object="${employee}">
+                <input th:type="hidden" name="id" th:field="*{id}">
+                <div class="form-group row">
+                    <label class="col-lg-4 col-form-label form-control-label">Mã Nhân Viên</label>
+                    <div class="col-lg-8">
+                        <input class="form-control" type="text" th:field="*{codeEmployee}" >
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label class="col-lg-4 col-form-label form-control-label">Name Employee</label>
+                    <div class="col-lg-8">
+                        <input class="form-control" type="text" th:field="*{fullName}" >
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label class="col-lg-4 col-form-label form-control-label">Part</label>
+                    <div class="col-lg-8">
+                        <!--                        <input class="form-control" type="text" th:field="*{employeeType}">-->
+                        <select class="form-control"  th:field="*{part}">
+                            <option th:each="c : ${parts}" th:value="${c.id}" th:text="${c.part_Name}"></option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <label class="col-lg-4 col-form-label form-control-label">Birthday</label>
+                    <div class="col-lg-8">
+                        <input class="form-control" type="date" th:field="*{birthday}" min="1970-01-01" max="2010-12-31">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label class="col-lg-4 col-form-label form-control-label">Id Number</label>
+                    <div class="col-lg-8">
+                        <input class="form-control" type="text" th:field="*{idNumber}">
+                        <p type="text" th:if="${#fields.hasErrors('idNumber')}" th:errors="*{idNumber}" style="color: red">Name Error</p>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label class="col-lg-4 col-form-label form-control-label">Gender</label>
+                    <div class="col-lg-8">
+                        <div class="form-check-inline">
+                            <label class="form-check-label" >
+                                <input th:field="*{gender}" type="radio" class="form-check-input" id="radio1" name="optradio" value="option1" checked>Male
+                            </label>
+                        </div>
+                        <div class="form-check-inline">
+                            <label class="form-check-label" >
+                                <input th:field="*{gender}" type="radio" class="form-check-input" id="radio2" name="optradio" value="option2">FeMale
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label class="col-lg-4 col-form-label form-control-label">Phone Number;</label>
+                    <div class="col-lg-8">
+                        <input class="form-control" type="number" th:field="*{phoneNumber}">
+                        <p type="text" th:if="${#fields.hasErrors('phoneNumber')}" th:errors="*{phoneNumber}" style="color: red">Name Error</p>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label class="col-lg-4 col-form-label form-control-label">Email</label>
+                    <div class="col-lg-8">
+                        <input class="form-control" type="email" th:field="*{email}">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label class="col-lg-4 col-form-label form-control-label">Address</label>
+                    <div class="col-lg-8">
+<!--                        <input class="form-control" type="text" th:field="*{address}">-->
+                        <textarea id="w3mission" rows="3" cols="50" th:field="*{address}"> </textarea>
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <div class="col-lg-12 text-center">
+                        <a type="button" class="btn btn-secondary" href="/employees">Cancel</a>
+                        <input type="submit" class="btn btn-primary"
+                               value="Save Changes">
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<div th:replace="layout_new :: footer"></div>
+
+</body>
+</html>

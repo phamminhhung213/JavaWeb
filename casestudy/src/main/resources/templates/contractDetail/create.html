@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="layout :: head">
+</head>
+<body>
+<div class="container" style="width: 50%">
+    <div class="card">
+        <div class="card-header">
+            <h4>ContractDetail Information</h4>
+            <th:block th:if="${message}">
+                <p style="color: blue" th:text="${message}"></p>
+            </th:block>
+        </div>
+        <div class="card-body">
+            <form class="form" role="form" autocomplete="off" th:action="@{create-contractDetail}" method="post" th:object="${contractDetail}">
+                <div class="form-group row">
+                    <label class="col-lg-4 col-form-label form-control-label">Id contact</label>
+                    <div class="col-lg-8">
+                        <select class="form-control"  th:field="*{contract}">
+                            <option th:each="c : ${contracts}" th:value="${c.id}" th:text="${c.id}"></option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label class="col-lg-4 col-form-label form-control-label">Id Accompany</label>
+                    <div class="col-lg-8">
+                        <select class="form-control"  th:field="*{accompany}">
+                            <option th:each="c : ${accompanys}" th:value="${c.id}" th:text="${c.name}"></option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label class="col-lg-4 col-form-label form-control-label">Quantity</label>
+                    <div class="col-lg-8">
+                        <input class="form-control" type="text" th:field="*{quantity}" >
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <div class="col-lg-12 text-center">
+                        <a type="button" class="btn btn-secondary" href="/contractDetails">Cancel</a>
+                        <input type="submit" class="btn btn-primary"
+                               value="Save Changes">
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+</body>
+</html>

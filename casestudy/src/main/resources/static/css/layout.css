@@ -1,0 +1,95 @@
+.header {
+    width: 100%;
+}
+.menu {
+    width: 100%;
+}
+.menu  ul {
+    margin: 0 10px 0 0;
+    list-style-type: none;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+.menu li {
+    float: left;
+}
+
+.menu li a {
+    font-size: 16px;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.menu li a:hover {
+    background-color: #1bd6f2;
+}
+
+.active {
+    margin-left: 10px;
+    background-color: #4CAF50;
+}
+.content_left{
+    width: 15%;
+    padding-left: 10px;
+}
+.content_left ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 200px;
+    background-color: #f1f1f1;
+}
+
+.content_left li a {
+    font-size: 16px;
+    display: block;
+    color: #000;
+    padding: 8px 16px;
+    text-decoration: none;
+}
+
+/* Change the link color on hover */
+.content_left li a:hover {
+    background-color: #555;
+    color: white;
+}
+
+/*content*/
+.content {
+    width: 70%;
+}
+.content_main{
+    width: 85%;
+}
+/*content_right*/
+.content_right {
+    width: 15%;
+}
+.content_right ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 200px;
+    background-color: #f1f1f1;
+}
+
+.content_right li a {
+    display: block;
+    color: #000;
+    padding: 8px 16px;
+    text-decoration: none;
+}
+
+/* Change the link color on hover */
+.content_right li a:hover {
+    background-color: #555;
+    color: white;
+}
+.footer {
+    text-align: center;
+}
