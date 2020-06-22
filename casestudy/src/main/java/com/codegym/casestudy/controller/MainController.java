@@ -15,4 +15,15 @@ public class MainController {
     public ModelAndView search() {
         return new ModelAndView("show/search");
     }
+
+    @GetMapping("register")
+    public ModelAndView register() {
+        return new ModelAndView("index");
+    }
+
+    @GetMapping("login")
+    public ModelAndView login() {
+        return new ModelAndView("login");
+    }
+
 }
